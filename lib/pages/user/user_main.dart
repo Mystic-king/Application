@@ -4,6 +4,7 @@ import 'package:untitled/pages/login.dart';
 import 'package:untitled/pages/user/change_password.dart';
 import 'package:untitled/pages/user/dashboard.dart';
 import 'package:untitled/pages/user/profile.dart';
+import 'package:untitled/pages/user/location.dart';
 
 class UserMain extends StatefulWidget {
   UserMain({Key? key}) : super(key: key);
@@ -17,6 +18,7 @@ class _UserMainState extends State<UserMain> {
   static List<Widget> _widgetOptions = <Widget>[
     Dashboard(),
     Profile(),
+    MapSample(),
     ChangePassword(),
   ];
   void _onItemTapped(int index) {
@@ -61,6 +63,9 @@ class _UserMainState extends State<UserMain> {
             label: 'My Profile',
           ),
           BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+          label: "Location"),
+          BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Change Password',
           ),
@@ -71,4 +76,7 @@ class _UserMainState extends State<UserMain> {
       ),
     );
   }
+
+
 }
+
